@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.cpp" "/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o"
   "/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.cpp" "/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o"
   "/home/cuadriante/CLionProjects/datos2_tareaec1/main.cpp" "/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles/datos2_tareaec1.dir/main.cpp.o"
   )

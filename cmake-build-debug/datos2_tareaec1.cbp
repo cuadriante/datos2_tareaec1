@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.cpp">
+			<Option target="datos2_tareaec1"/>
+		</Unit>
+		<Unit filename="/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.h">
+			<Option target="datos2_tareaec1"/>
+		</Unit>
 		<Unit filename="/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.cpp">
 			<Option target="datos2_tareaec1"/>
 		</Unit>

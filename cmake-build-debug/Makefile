@@ -129,6 +129,30 @@ datos2_tareaec1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/build
 .PHONY : datos2_tareaec1/fast
 
+FileExtraction.o: FileExtraction.cpp.o
+.PHONY : FileExtraction.o
+
+# target to build an object file
+FileExtraction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o
+.PHONY : FileExtraction.cpp.o
+
+FileExtraction.i: FileExtraction.cpp.i
+.PHONY : FileExtraction.i
+
+# target to preprocess a source file
+FileExtraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.i
+.PHONY : FileExtraction.cpp.i
+
+FileExtraction.s: FileExtraction.cpp.s
+.PHONY : FileExtraction.s
+
+# target to generate assembly for a file
+FileExtraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.s
+.PHONY : FileExtraction.cpp.s
+
 QuickSort.o: QuickSort.cpp.o
 .PHONY : QuickSort.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... datos2_tareaec1"
+	@echo "... FileExtraction.o"
+	@echo "... FileExtraction.i"
+	@echo "... FileExtraction.s"
 	@echo "... QuickSort.o"
 	@echo "... QuickSort.i"
 	@echo "... QuickSort.s"

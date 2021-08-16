@@ -6,23 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.cpp
-QuickSort.h
-/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
-cstdio
--
+/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.cpp
+FileExtraction.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.h
 iostream
 -
-
-/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
-cstdio
+string
+-
+vector
 -
 
-/home/cuadriante/CLionProjects/datos2_tareaec1/main.cpp
+/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.h
 iostream
 -
-cstdio
+fstream
 -
-QuickSort.h
-/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
 
