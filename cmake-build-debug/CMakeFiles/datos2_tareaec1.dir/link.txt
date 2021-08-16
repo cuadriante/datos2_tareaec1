@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/datos2_tareaec1.dir/main.cpp.o CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o -o datos2_tareaec1 

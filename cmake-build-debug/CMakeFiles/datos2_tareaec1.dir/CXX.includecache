@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.cpp
+QuickSort.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
+cstdio
+-
+iostream
+-
+
+/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
+cstdio
+-
+
+/home/cuadriante/CLionProjects/datos2_tareaec1/main.cpp
+iostream
+-
+cstdio
+-
+QuickSort.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
+
