@@ -15,6 +15,7 @@ public:
     PagedArray(std::string destinyFileName, int numberSize);
     ~PagedArray();
     int getIntFromDestinyFile(int index);
+    void setIntToDestinyFile(int numberToSet, int index);
 
 
 };

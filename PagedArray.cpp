@@ -30,4 +30,12 @@ PagedArray::~PagedArray() {
     g_destinyFile.close();
 }
 
+void PagedArray::setIntToDestinyFile(int numberToSet, int index) {
+    int position = (g_numberSize + 1)*index;
+    char* memblock = new char [g_numberSize];
+    g_destinyFile.seekg(position, ios::beg);
+    g_destinyFile.write (memblock, g_numberSize);
+
+}
+
 
