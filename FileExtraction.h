@@ -17,8 +17,8 @@ public:
     std::ofstream* getDestinyFile();
     std::vector<int> getDestinyFileVector();
     int getHighestNumber(std::ifstream* initialFile);
-    int addZeroes(int intToken, std::ofstream* destinyFile);
     int getDigits(int intToken);
+    int getHighestNumberDigits();
 };
 
 

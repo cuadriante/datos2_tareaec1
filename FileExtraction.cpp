@@ -112,23 +112,10 @@ int FileExtraction::getHighestNumber(std::ifstream* initialFile) {
             line.erase(0, pos + delimiter.length());
         }
     }
-
     initialFile->close();
     cout << "highest number: " << highestNumber << "\n";
 
     return highestNumber;
-}
-
-int FileExtraction::addZeroes(int intToken, ofstream* destinyFile) {
-    string toAdd;
-    int quantityToAdd = getDigits(g_highestNumber) - getDigits(intToken);
-    while (quantityToAdd > 0)
-    {
-        *destinyFile << "0";
-        quantityToAdd --;
-    }
-
-    return 0;
 }
 
 int FileExtraction::getDigits(int intToken) {
@@ -138,6 +125,10 @@ int FileExtraction::getDigits(int intToken) {
         digits++;
     }
     return digits;
+}
+
+int FileExtraction::getHighestNumberDigits() {
+    return g_highestNumberDigits;
 }
 
 

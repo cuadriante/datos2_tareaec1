@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o"
+  "CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o"
   "CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o"
   "CMakeFiles/datos2_tareaec1.dir/main.cpp.o"
   "datos2_tareaec1"

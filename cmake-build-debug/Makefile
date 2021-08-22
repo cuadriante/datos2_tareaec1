@@ -153,6 +153,30 @@ FileExtraction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.s
 .PHONY : FileExtraction.cpp.s
 
+PagedArray.o: PagedArray.cpp.o
+.PHONY : PagedArray.o
+
+# target to build an object file
+PagedArray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o
+.PHONY : PagedArray.cpp.o
+
+PagedArray.i: PagedArray.cpp.i
+.PHONY : PagedArray.i
+
+# target to preprocess a source file
+PagedArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.i
+.PHONY : PagedArray.cpp.i
+
+PagedArray.s: PagedArray.cpp.s
+.PHONY : PagedArray.s
+
+# target to generate assembly for a file
+PagedArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.s
+.PHONY : PagedArray.cpp.s
+
 QuickSort.o: QuickSort.cpp.o
 .PHONY : QuickSort.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... FileExtraction.o"
 	@echo "... FileExtraction.i"
 	@echo "... FileExtraction.s"
+	@echo "... PagedArray.o"
+	@echo "... PagedArray.i"
+	@echo "... PagedArray.s"
 	@echo "... QuickSort.o"
 	@echo "... QuickSort.i"
 	@echo "... QuickSort.s"
