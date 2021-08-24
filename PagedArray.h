@@ -18,17 +18,18 @@ private:
     int digits;
     const int maxPages = 6;
     int size;
-    vector<IntPage> loadedPages;
+    mutable vector<IntPage *> loadedPages;
 
 public:
     PagedArray(std::string destinyFileName, int numberSize);
     ~PagedArray();
     void printContents();
     int getSize();
-    IntPage* searchForPage(int pageNumber);
+    IntPage * searchForPage(int pageNumber);
 
 
     int &operator[](int index);
+    //int operator[](int index) const;
 //
 };
 

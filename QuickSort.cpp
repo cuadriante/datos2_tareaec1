@@ -25,7 +25,7 @@
 //}
 //
 //int QuickSort::partition(PagedArray *arr, int low, int high) {
-//    int *pivot = &arr[high]; // primero lo posiciona en el ultimo elemento
+//    int pivot = arr[high]; // primero lo posiciona en el ultimo elemento
 //
 //    printArray(arr, high);
 //    //std::cout << "low: " << low << "\n";
@@ -54,4 +54,4 @@
 //    printf("\n");
 //}
 //
-
+//

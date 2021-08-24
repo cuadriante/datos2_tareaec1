@@ -39,7 +39,6 @@ void IntPage::readFromFile() {
     }
     delete[] memblock;
     destinyFile->seekg(0, ios::beg);
-
 }
 
 void IntPage::writeToFile() {

@@ -32,13 +32,17 @@ int main()
     ofstream* destinyFile = fe.getDestinyFile();
     int numberSize = fe.getHighestNumberDigits();
 
-    //PagedArray pa("destinyfile.txt", numberSize);
+    PagedArray pa("destinyfile.txt", numberSize);
 
-    fstream g_destinyFile;
-    g_destinyFile.open("destinyfile.txt", ios::in | ios::out | ios::binary);
+//    fstream g_destinyFile;
+//    g_destinyFile.open("destinyfile.txt", ios::in | ios::out | ios::binary);
+//
+//    IntPage intp(&g_destinyFile, 4, 7);
+//    cout << *intp.getElement(2);
 
-    IntPage intp(&g_destinyFile, 4, 7);
-    cout << intp.getElement(2);
+    pa[2] = 19;
+    cout << pa[2] << endl;
+
 
     //intp.readFromPageArray(pa, 1);
 
