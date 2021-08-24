@@ -53,6 +53,7 @@ void IntPage::writeToFile() {
         }
         *destinyFile << value << ',';
     }
+    destinyFile->seekg(0, ios::beg);
 }
 
 int IntPage::getPageNumber() {
@@ -61,5 +62,9 @@ int IntPage::getPageNumber() {
 
 int *IntPage::getElement(int indexInPage) {
     return &data.at(indexInPage);
+}
+
+IntPage::~IntPage() {
+    writeToFile();
 }
 

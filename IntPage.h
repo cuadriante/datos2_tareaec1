@@ -25,6 +25,7 @@ public:
 
     static const int pageSize = 3;
     IntPage(fstream* destinyFile, int pageNumber, int digits);
+    ~IntPage();
     void readFromFile();
     void writeToFile();
     void printArray(int* arr);

@@ -16,6 +16,10 @@ PagedArray::PagedArray(string destFileName, int numberSize) {
 
 
 PagedArray::~PagedArray() {
+    while (loadedPages.size() > 0){
+        delete loadedPages.at(0);
+        loadedPages.erase(loadedPages.begin());
+    }
     destinyFile.close();
 }
 
@@ -58,7 +62,11 @@ IntPage * PagedArray::searchForPage(int pageNumber) {
         }
     }
     page = new IntPage(&destinyFile, pageNumber, digits);
-    loadedPages.push_back(page);
+    loadedPages.push_back(page); // se crea una pagina nueva si no existe en el vector
+    if (loadedPages.size() > maxPages){
+        delete loadedPages.at(0);
+        loadedPages.erase(loadedPages.begin());
+    }
     return page;
 }
 
