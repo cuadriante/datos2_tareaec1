@@ -43,6 +43,10 @@ int main()
     pa[2] = 19;
     cout << pa[2] << endl;
 
+    PagedArray* pax = &pa;
+    cout << (*pax)[2] << endl;
+
+
 
     //intp.readFromPageArray(pa, 1);
 
