@@ -6,7 +6,10 @@
 #define DATOS2_TAREAEC1_INTPAGE_H
 
 
-#include "PagedArray.h"
+//#include "PagedArray.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
 
 using namespace std;
 

@@ -6,7 +6,7 @@
 #include "PagedArray.h"
 #include<cstdio>
 #include <iostream>
-//
+
 //void QuickSort::quickSort(PagedArray arr, int low, int high) {
 //    if (low < high)
 //    {
@@ -17,14 +17,15 @@
 //    }
 //}
 //
-//void QuickSort::swap(int i, int j, PagedArray arr) {
-////    int t = arr[i];
-////    arr[i] = arr[j];
-////    arr[j] = t;
+//void QuickSort::swap(int* a, int* b)
+//{
+//    int t = *a;
+//    *a = *b;
+//    *b = t;
 //}
 //
-//int QuickSort::partition(PagedArray arr, int low, int high) {
-//    int pivot = arr[high]; // primero lo posiciona en el ultimo elemento
+//int QuickSort::partition(PagedArray *arr, int low, int high) {
+//    int *pivot = &arr[high]; // primero lo posiciona en el ultimo elemento
 //
 //    printArray(arr, high);
 //    //std::cout << "low: " << low << "\n";
@@ -39,10 +40,10 @@
 //        if (arr[j] <= pivot)
 //        {
 //            i++;    // incrementa index del menor elemento
-//            swap(i, j, arr); // ordena
+//            swap(i, j); // ordena
 //        }
 //    }
-//    swap(i + 1, high, arr);
+//    swap(i + 1, high);
 //    return (i + 1);
 //}
 //
@@ -53,4 +54,4 @@
 //    printf("\n");
 //}
 //
-//
+

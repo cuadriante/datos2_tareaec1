@@ -10,13 +10,13 @@
 
 class QuickSort {
 public:
-    void swap(int i, int j , PagedArray arr);
-    int partition (PagedArray arr, int low, int high);
+    void swap(int i, int j );
+    int partition (PagedArray *arr, int low, int high);
     void quickSort(PagedArray arr, int low, int high);
     void printArray(PagedArray arr, int size);
 
 
-
+    void swap(int *a, int *b);
 };
 
 

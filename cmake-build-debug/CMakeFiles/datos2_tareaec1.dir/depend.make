@@ -9,9 +9,11 @@ CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.o: \
  ../IntPage.h \
  ../PagedArray.h
 CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o: \
+ ../IntPage.h \
  ../PagedArray.cpp \
  ../PagedArray.h
 CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o: \
+ ../IntPage.h \
  ../PagedArray.h \
  ../QuickSort.cpp \
  ../QuickSort.h

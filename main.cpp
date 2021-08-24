@@ -38,7 +38,8 @@ int main()
     g_destinyFile.open("destinyfile.txt", ios::in | ios::out | ios::binary);
 
     IntPage intp(&g_destinyFile, 4, 7);
-    intp.writeToFile();
+    cout << intp.getElement(2);
+
     //intp.readFromPageArray(pa, 1);
 
 //    pa.printContents();
