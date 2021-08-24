@@ -10,7 +10,8 @@ using namespace std;
 PagedArray::PagedArray(string destFileName, int numberSize) {
     destinyFile.open(destFileName, ios::in | ios::out | ios::binary);
     digits = numberSize;
-    size = destinyFile.gcount()/(numberSize + 1);
+    destinyFile.seekg(0,ios::end);
+    size = destinyFile.tellg()/(digits + 1);
 }
 
 

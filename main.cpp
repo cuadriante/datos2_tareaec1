@@ -62,8 +62,11 @@ int main()
 //    //vector<int> fileVector = fe.getDestinyFileVector();
 //    //int* arr = &fileVector[0];
 //    //int n = fileVector.size();
-//    qs.quickSort(pa, 0, pa.getSize() - 1);
-//    qs.printArray(pa, pa.getSize());
+    cout << "boop";
+    cout << pa.getSize() << endl;
+    qs.quickSort(&pa, 0, pa.getSize() - 1);
+    qs.printArray(&pa, pa.getSize());
+    cout << "boop2";
 
 
 
