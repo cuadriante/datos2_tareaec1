@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/cuadriante/CLionProjects/datos2_tareaec1/IntPage.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.h
 iostream
 -
 fstream
@@ -14,9 +14,13 @@ fstream
 vector
 -
 
-/home/cuadriante/CLionProjects/datos2_tareaec1/PagedArray.cpp
-PagedArray.h
-/home/cuadriante/CLionProjects/datos2_tareaec1/PagedArray.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/IntPage.h
+iostream
+-
+fstream
+-
+vector
+-
 
 /home/cuadriante/CLionProjects/datos2_tareaec1/PagedArray.h
 iostream
@@ -27,4 +31,28 @@ vector
 -
 IntPage.h
 /home/cuadriante/CLionProjects/datos2_tareaec1/IntPage.h
+
+/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
+cstdio
+-
+PagedArray.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/PagedArray.h
+
+/home/cuadriante/CLionProjects/datos2_tareaec1/main.cpp
+iostream
+-
+cstdio
+-
+QuickSort.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/QuickSort.h
+FileExtraction.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/FileExtraction.h
+PagedArray.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/PagedArray.h
+IntPage.h
+/home/cuadriante/CLionProjects/datos2_tareaec1/IntPage.h
+iostream
+-
+string
+-
 

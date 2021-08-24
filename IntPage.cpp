@@ -6,17 +6,6 @@
 #include "PagedArray.h"
 #include <vector>
 
-
-
-void IntPage::printArray(int *arr) {
-    int size = sizeof(arr)/sizeof(arr[0]);
-    int i;
-    for (i=0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-
-}
-
 IntPage::IntPage(fstream* destFile, int pageNumber, int digits) {
     destinyFile = destFile;
     this->pageNumber = pageNumber;
@@ -30,7 +19,7 @@ void IntPage::readFromFile() {
     char* memblock = new char [digits];
     destinyFile->seekg(position, ios::beg);
     int i = pageSize;
-    while ( i > 0 ) {
+    while ( i > 0 && !destinyFile->eof() ) {
         destinyFile->read (memblock, digits);
         int value = atoi(memblock);
         data.push_back(value);
@@ -61,6 +50,9 @@ int IntPage::getPageNumber() {
 }
 
 int *IntPage::getElement(int indexInPage) {
+    if (indexInPage > data.size()) {
+        cout << "Error: no existe el elemento " << indexInPage << endl;
+    }
     return &data.at(indexInPage);
 }
 

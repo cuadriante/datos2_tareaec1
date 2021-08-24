@@ -40,11 +40,11 @@ int main()
 //    IntPage intp(&g_destinyFile, 4, 7);
 //    cout << *intp.getElement(2);
 
-    pa[2] = 19;
-    cout << pa[2] << endl;
+    //pa[2] = 19;
+    //cout << pa[2] << endl;
 
-    PagedArray* pax = &pa;
-    cout << (*pax)[2] << endl;
+    //PagedArray* pax = &pa;
+    //cout << (*pax)[2] << endl;
 
 
 
@@ -64,6 +64,7 @@ int main()
 //    //int n = fileVector.size();
     cout << "boop";
     cout << pa.getSize() << endl;
+    //qs.printArray(&pa, pa.getSize());
     qs.quickSort(&pa, 0, pa.getSize() - 1);
     qs.printArray(&pa, pa.getSize());
     cout << "boop2";

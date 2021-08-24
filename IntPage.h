@@ -28,7 +28,6 @@ public:
     ~IntPage();
     void readFromFile();
     void writeToFile();
-    void printArray(int* arr);
     int getPageNumber();
     int* getElement(int indexInPage);
 };
