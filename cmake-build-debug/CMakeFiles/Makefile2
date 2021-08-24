@@ -81,12 +81,12 @@ clean: CMakeFiles/datos2_tareaec1.dir/clean
 CMakeFiles/datos2_tareaec1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target datos2_tareaec1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target datos2_tareaec1"
 .PHONY : CMakeFiles/datos2_tareaec1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/datos2_tareaec1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/datos2_tareaec1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/datos2_tareaec1.dir/rule

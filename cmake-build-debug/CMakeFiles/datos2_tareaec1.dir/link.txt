@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/datos2_tareaec1.dir/main.cpp.o CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o -o datos2_tareaec1 
+/usr/bin/c++ -g CMakeFiles/datos2_tareaec1.dir/main.cpp.o CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.o -o datos2_tareaec1 

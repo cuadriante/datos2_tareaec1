@@ -3,39 +3,58 @@
 //
 
 #include "PagedArray.h"
-    int g_numberSize;
-    std::fstream g_destinyFile;
 
-    using namespace std;
+
+using namespace std;
 
 PagedArray::PagedArray(string destFileName, int numberSize) {
-    g_destinyFile.open(destFileName, ios::in | ios::out | ios::binary);
-    g_numberSize = numberSize;
-}
-
-int PagedArray::getIntFromDestinyFile(int index) {
-    int position = (g_numberSize + 1)*index;
-    char* memblock = new char [g_numberSize];
-    g_destinyFile.seekg(position, ios::beg);
-    g_destinyFile.read (memblock, g_numberSize);
-    int numberFound = atoi(memblock);
-
-    delete[] memblock;
-
-    return numberFound ;
+    destinyFile.open(destFileName, ios::in | ios::out | ios::binary);
+    digits = numberSize;
+    size = destinyFile.gcount()/(numberSize + 1);
 }
 
 
 PagedArray::~PagedArray() {
-    g_destinyFile.close();
+    destinyFile.close();
 }
 
-void PagedArray::setIntToDestinyFile(int numberToSet, int index) {
-    int position = (g_numberSize + 1)*index;
-    char* memblock = new char [g_numberSize];
-    g_destinyFile.seekg(position, ios::beg);
-    g_destinyFile.write (memblock, g_numberSize);
 
+void PagedArray::printContents(){
+    destinyFile.flush();
+    string line;
+    int i = 0;
+    getline(destinyFile, line);
+    cout << "from destiny file: " << line << '\n';
 }
+
+int PagedArray::getSize(){
+    return size;
+}
+
+int &PagedArray::operator[](int index) {
+    int pageNumber = index/IntPage::pageSize;
+    IntPage *page = searchForPage(pageNumber);
+    int indexInPage = index % IntPage::pageSize;
+    return *page->getElement(indexInPage);
+}
+
+IntPage* PagedArray::searchForPage(int pageNumber) {
+    IntPage* page;
+    for (int i = 0; i < loadedPages.size(); i++) {
+        page = &loadedPages.at(i);
+        if (page->getPageNumber() == pageNumber){
+            return page;
+        }
+    }
+    page = new IntPage(&destinyFile, pageNumber, digits);
+    loadedPages.push_back(*page);
+
+    return page;
+}
+
+
+
+
+
 
 

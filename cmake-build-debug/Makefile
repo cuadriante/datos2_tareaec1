@@ -153,6 +153,30 @@ FileExtraction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.s
 .PHONY : FileExtraction.cpp.s
 
+IntPage.o: IntPage.cpp.o
+.PHONY : IntPage.o
+
+# target to build an object file
+IntPage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.o
+.PHONY : IntPage.cpp.o
+
+IntPage.i: IntPage.cpp.i
+.PHONY : IntPage.i
+
+# target to preprocess a source file
+IntPage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.i
+.PHONY : IntPage.cpp.i
+
+IntPage.s: IntPage.cpp.s
+.PHONY : IntPage.s
+
+# target to generate assembly for a file
+IntPage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.s
+.PHONY : IntPage.cpp.s
+
 PagedArray.o: PagedArray.cpp.o
 .PHONY : PagedArray.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... FileExtraction.o"
 	@echo "... FileExtraction.i"
 	@echo "... FileExtraction.s"
+	@echo "... IntPage.o"
+	@echo "... IntPage.i"
+	@echo "... IntPage.s"
 	@echo "... PagedArray.o"
 	@echo "... PagedArray.i"
 	@echo "... PagedArray.s"

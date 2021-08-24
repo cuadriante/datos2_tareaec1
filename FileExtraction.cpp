@@ -68,7 +68,7 @@ void FileExtraction::parseToDestinyFile(string line, ofstream* destinyFile) {
 
         *destinyFile << intToken << ",";
 
-        std::cout << "parsed: " << intToken << std::endl;
+        //std::cout << "parsed: " << intToken << std::endl;
 
         g_intVector.insert(g_intVector.cend(), intToken);
 
@@ -76,7 +76,7 @@ void FileExtraction::parseToDestinyFile(string line, ofstream* destinyFile) {
     }
     g_destFile = destinyFile;
     destinyFile->close();
-    cout << "delimiter not found for " << line << "\n";
+    // cout << "delimiter not found for " << line << "\n";
     //std::cout << line << std::endl;
 }
 

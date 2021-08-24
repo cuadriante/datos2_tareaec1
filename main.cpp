@@ -7,9 +7,10 @@
 #include "QuickSort.h"
 #include "FileExtraction.h"
 #include "PagedArray.h"
+#include "IntPage.h"
 #include <iostream>
 #include <string>
-#include <vector>
+
 
 using namespace std;
 
@@ -30,19 +31,30 @@ int main()
     fe.openAndExtractFile("initialfile.txt", "destinyfile.txt");
     ofstream* destinyFile = fe.getDestinyFile();
     int numberSize = fe.getHighestNumberDigits();
-    PagedArray pa("destinyfile.txt", numberSize);
-    cout << "number found: " << pa.getIntFromDestinyFile(8) << "\n";
 
-    int num1 = pa.getIntFromDestinyFile(3);
-    int num2 = pa.getIntFromDestinyFile(6);
-    pa.setIntToDestinyFile(num2, 3);
-    pa.setIntToDestinyFile(num1, 6);
+    //PagedArray pa("destinyfile.txt", numberSize);
 
-    vector<int> fileVector = fe.getDestinyFileVector();
-    int* arr = &fileVector[0];
-    int n = fileVector.size();
-    qs.quickSort(arr, 0, n - 1);
-    qs.printArray(arr, n);
+    fstream g_destinyFile;
+    g_destinyFile.open("destinyfile.txt", ios::in | ios::out | ios::binary);
+
+    IntPage intp(&g_destinyFile, 4, 7);
+    intp.writeToFile();
+    //intp.readFromPageArray(pa, 1);
+
+//    pa.printContents();
+//
+//    int num1 = pa.getIntFromDestinyFile(3);
+//    int num2 = pa.getIntFromDestinyFile(6);
+//    pa.setIntToDestinyFile(num1, 6);
+//    pa.setIntToDestinyFile(num2, 3);
+//
+//
+//
+//    //vector<int> fileVector = fe.getDestinyFileVector();
+//    //int* arr = &fileVector[0];
+//    //int n = fileVector.size();
+//    qs.quickSort(pa, 0, pa.getSize() - 1);
+//    qs.printArray(pa, pa.getSize());
 
 
 
