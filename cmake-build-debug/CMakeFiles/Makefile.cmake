@@ -46,5 +46,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/datos2_tareaec1.dir/DependInfo.cmake"
+  "CMakeFiles/paged-sort.dir/DependInfo.cmake"
   )

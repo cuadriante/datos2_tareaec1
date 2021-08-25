@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named datos2_tareaec1
+# Target rules for targets named paged-sort
 
 # Build rule for target.
-datos2_tareaec1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 datos2_tareaec1
-.PHONY : datos2_tareaec1
+paged-sort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paged-sort
+.PHONY : paged-sort
 
 # fast build rule for target.
-datos2_tareaec1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/build
-.PHONY : datos2_tareaec1/fast
+paged-sort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/build
+.PHONY : paged-sort/fast
 
 CreateInitialFile.o: CreateInitialFile.cpp.o
 .PHONY : CreateInitialFile.o
 
 # target to build an object file
 CreateInitialFile.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/CreateInitialFile.cpp.o
 .PHONY : CreateInitialFile.cpp.o
 
 CreateInitialFile.i: CreateInitialFile.cpp.i
@@ -142,7 +142,7 @@ CreateInitialFile.i: CreateInitialFile.cpp.i
 
 # target to preprocess a source file
 CreateInitialFile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/CreateInitialFile.cpp.i
 .PHONY : CreateInitialFile.cpp.i
 
 CreateInitialFile.s: CreateInitialFile.cpp.s
@@ -150,7 +150,7 @@ CreateInitialFile.s: CreateInitialFile.cpp.s
 
 # target to generate assembly for a file
 CreateInitialFile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/CreateInitialFile.cpp.s
 .PHONY : CreateInitialFile.cpp.s
 
 FileExtraction.o: FileExtraction.cpp.o
@@ -158,7 +158,7 @@ FileExtraction.o: FileExtraction.cpp.o
 
 # target to build an object file
 FileExtraction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/FileExtraction.cpp.o
 .PHONY : FileExtraction.cpp.o
 
 FileExtraction.i: FileExtraction.cpp.i
@@ -166,7 +166,7 @@ FileExtraction.i: FileExtraction.cpp.i
 
 # target to preprocess a source file
 FileExtraction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/FileExtraction.cpp.i
 .PHONY : FileExtraction.cpp.i
 
 FileExtraction.s: FileExtraction.cpp.s
@@ -174,7 +174,7 @@ FileExtraction.s: FileExtraction.cpp.s
 
 # target to generate assembly for a file
 FileExtraction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/FileExtraction.cpp.s
 .PHONY : FileExtraction.cpp.s
 
 IntPage.o: IntPage.cpp.o
@@ -182,7 +182,7 @@ IntPage.o: IntPage.cpp.o
 
 # target to build an object file
 IntPage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/IntPage.cpp.o
 .PHONY : IntPage.cpp.o
 
 IntPage.i: IntPage.cpp.i
@@ -190,7 +190,7 @@ IntPage.i: IntPage.cpp.i
 
 # target to preprocess a source file
 IntPage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/IntPage.cpp.i
 .PHONY : IntPage.cpp.i
 
 IntPage.s: IntPage.cpp.s
@@ -198,7 +198,7 @@ IntPage.s: IntPage.cpp.s
 
 # target to generate assembly for a file
 IntPage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/IntPage.cpp.s
 .PHONY : IntPage.cpp.s
 
 PagedArray.o: PagedArray.cpp.o
@@ -206,7 +206,7 @@ PagedArray.o: PagedArray.cpp.o
 
 # target to build an object file
 PagedArray.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/PagedArray.cpp.o
 .PHONY : PagedArray.cpp.o
 
 PagedArray.i: PagedArray.cpp.i
@@ -214,7 +214,7 @@ PagedArray.i: PagedArray.cpp.i
 
 # target to preprocess a source file
 PagedArray.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/PagedArray.cpp.i
 .PHONY : PagedArray.cpp.i
 
 PagedArray.s: PagedArray.cpp.s
@@ -222,7 +222,7 @@ PagedArray.s: PagedArray.cpp.s
 
 # target to generate assembly for a file
 PagedArray.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/PagedArray.cpp.s
 .PHONY : PagedArray.cpp.s
 
 QuickSort.o: QuickSort.cpp.o
@@ -230,7 +230,7 @@ QuickSort.o: QuickSort.cpp.o
 
 # target to build an object file
 QuickSort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/QuickSort.cpp.o
 .PHONY : QuickSort.cpp.o
 
 QuickSort.i: QuickSort.cpp.i
@@ -238,7 +238,7 @@ QuickSort.i: QuickSort.cpp.i
 
 # target to preprocess a source file
 QuickSort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/QuickSort.cpp.i
 .PHONY : QuickSort.cpp.i
 
 QuickSort.s: QuickSort.cpp.s
@@ -246,7 +246,7 @@ QuickSort.s: QuickSort.cpp.s
 
 # target to generate assembly for a file
 QuickSort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/QuickSort.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/QuickSort.cpp.s
 .PHONY : QuickSort.cpp.s
 
 main.o: main.cpp.o
@@ -254,7 +254,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -262,7 +262,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -270,7 +270,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... datos2_tareaec1"
+	@echo "... paged-sort"
 	@echo "... CreateInitialFile.o"
 	@echo "... CreateInitialFile.i"
 	@echo "... CreateInitialFile.s"

@@ -15,7 +15,7 @@ protected:
     ofstream initialFile;
 
 public:
-    CreateInitialFile(int pageQuantity);
+    CreateInitialFile(string initialFileName, int pageQuantity);
 
 };
 

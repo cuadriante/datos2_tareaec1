@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/paged-sort.dir/main.cpp.o CMakeFiles/paged-sort.dir/QuickSort.cpp.o CMakeFiles/paged-sort.dir/FileExtraction.cpp.o CMakeFiles/paged-sort.dir/PagedArray.cpp.o CMakeFiles/paged-sort.dir/IntPage.cpp.o CMakeFiles/paged-sort.dir/CreateInitialFile.cpp.o -o paged-sort 

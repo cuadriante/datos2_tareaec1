@@ -4,10 +4,10 @@
 
 #include "CreateInitialFile.h"
 
-CreateInitialFile::CreateInitialFile(int pageQuantity) {
+CreateInitialFile::CreateInitialFile(string initialFileName, int pageQuantity) {
     int totalQuantity = pageQuantity * IntPage::pageSize;
     ofstream initialFile;
-    initialFile.open ("initialfile.txt");
+    initialFile.open (initialFileName);
     string line;
     string delimiter = ",";
 

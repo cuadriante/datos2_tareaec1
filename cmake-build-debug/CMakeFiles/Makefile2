@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-de
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/datos2_tareaec1.dir/all
+all: CMakeFiles/paged-sort.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/datos2_tareaec1.dir/clean
+clean: CMakeFiles/paged-sort.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/datos2_tareaec1.dir
+# Target rules for target CMakeFiles/paged-sort.dir
 
 # All Build rule for target.
-CMakeFiles/datos2_tareaec1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target datos2_tareaec1"
-.PHONY : CMakeFiles/datos2_tareaec1.dir/all
+CMakeFiles/paged-sort.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target paged-sort"
+.PHONY : CMakeFiles/paged-sort.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/datos2_tareaec1.dir/rule: cmake_check_build_system
+CMakeFiles/paged-sort.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/datos2_tareaec1.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/paged-sort.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuadriante/CLionProjects/datos2_tareaec1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/datos2_tareaec1.dir/rule
+.PHONY : CMakeFiles/paged-sort.dir/rule
 
 # Convenience name for target.
-datos2_tareaec1: CMakeFiles/datos2_tareaec1.dir/rule
-.PHONY : datos2_tareaec1
+paged-sort: CMakeFiles/paged-sort.dir/rule
+.PHONY : paged-sort
 
 # clean rule for target.
-CMakeFiles/datos2_tareaec1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/clean
-.PHONY : CMakeFiles/datos2_tareaec1.dir/clean
+CMakeFiles/paged-sort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged-sort.dir/build.make CMakeFiles/paged-sort.dir/clean
+.PHONY : CMakeFiles/paged-sort.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
