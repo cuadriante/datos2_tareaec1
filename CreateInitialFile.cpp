@@ -7,7 +7,7 @@
 CreateInitialFile::CreateInitialFile(string initialFileName, int pageQuantity) {
     int totalQuantity = pageQuantity * IntPage::pageSize;
     ofstream initialFile;
-    initialFile.open (initialFileName);
+    initialFile.open (initialFileName, ios::out | ios::trunc);
     string line;
     string delimiter = ",";
 
@@ -16,7 +16,7 @@ CreateInitialFile::CreateInitialFile(string initialFileName, int pageQuantity) {
 
     int i = 0;
     while (i < totalQuantity) {
-        token = rand() % 10000000;
+        token = rand() % 100000000000000;
 
         initialFile << token << ",";
 

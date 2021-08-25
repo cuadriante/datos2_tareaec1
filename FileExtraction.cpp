@@ -21,18 +21,16 @@ void FileExtraction::openAndExtractFile(string initialFileName, string destinyFi
     destFile.open (destinyFileName, ios::trunc | ios::binary);
     string line;
 
-
-
     int i = 0;
     if (initialFile.is_open() && destFile.is_open())
     {
         g_highestNumber = getHighestNumber(&initialFile);
         g_highestNumberDigits = getDigits(g_highestNumber);
         initialFile.open(initialFileName);
-        std::cout << "initialFile opened \n";
+        //std::cout << "initialFile opened \n";
         while ( getline (initialFile, line) )
         {
-            cout << "from initialFile: " << line << '\n';
+            //cout << "from initialFile: " << line << '\n';
             parseToDestinyFile(line, &destFile);
             i++;
         }
@@ -113,7 +111,7 @@ int FileExtraction::getHighestNumber(std::ifstream* initialFile) {
         }
     }
     initialFile->close();
-    cout << "highest number: " << highestNumber << "\n";
+    //cout << "highest number: " << highestNumber << "\n";
 
     return highestNumber;
 }
