@@ -7,6 +7,7 @@
 #include "QuickSort.h"
 #include "FileExtraction.h"
 #include "PagedArray.h"
+#include "CreateInitialFile.h"
 #include "IntPage.h"
 #include <iostream>
 #include <string>
@@ -18,6 +19,7 @@ int main()
 {
     QuickSort qs;
     FileExtraction fe;
+    CreateInitialFile cif(7);
 
 
     // ejemplo quicksort

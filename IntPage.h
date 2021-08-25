@@ -23,7 +23,7 @@ private:
 
 public:
 
-    static const int pageSize = 3;
+    static const int pageSize = 256;
     IntPage(fstream* destinyFile, int pageNumber, int digits);
     ~IntPage();
     void readFromFile();

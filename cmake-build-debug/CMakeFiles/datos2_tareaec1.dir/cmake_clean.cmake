@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.o"
   "CMakeFiles/datos2_tareaec1.dir/FileExtraction.cpp.o"
   "CMakeFiles/datos2_tareaec1.dir/IntPage.cpp.o"
   "CMakeFiles/datos2_tareaec1.dir/PagedArray.cpp.o"

@@ -129,6 +129,30 @@ datos2_tareaec1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/build
 .PHONY : datos2_tareaec1/fast
 
+CreateInitialFile.o: CreateInitialFile.cpp.o
+.PHONY : CreateInitialFile.o
+
+# target to build an object file
+CreateInitialFile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.o
+.PHONY : CreateInitialFile.cpp.o
+
+CreateInitialFile.i: CreateInitialFile.cpp.i
+.PHONY : CreateInitialFile.i
+
+# target to preprocess a source file
+CreateInitialFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.i
+.PHONY : CreateInitialFile.cpp.i
+
+CreateInitialFile.s: CreateInitialFile.cpp.s
+.PHONY : CreateInitialFile.s
+
+# target to generate assembly for a file
+CreateInitialFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/datos2_tareaec1.dir/build.make CMakeFiles/datos2_tareaec1.dir/CreateInitialFile.cpp.s
+.PHONY : CreateInitialFile.cpp.s
+
 FileExtraction.o: FileExtraction.cpp.o
 .PHONY : FileExtraction.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... datos2_tareaec1"
+	@echo "... CreateInitialFile.o"
+	@echo "... CreateInitialFile.i"
+	@echo "... CreateInitialFile.s"
 	@echo "... FileExtraction.o"
 	@echo "... FileExtraction.i"
 	@echo "... FileExtraction.s"
