@@ -1,0 +1,91 @@
+\hypertarget{classCreateInitialFile}{}\doxysection{Create\+Initial\+File Class Reference}
+\label{classCreateInitialFile}\index{CreateInitialFile@{CreateInitialFile}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCreateInitialFile_aac4c1b87d39d109433dc3bb6aa0e4c20}{Create\+Initial\+File}} (string initial\+File\+Name, int page\+Quantity)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ofstream \mbox{\hyperlink{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}{initial\+File}}
+\begin{DoxyCompactList}\small\item\em An ofstream initial\+File. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{CreateInitialFile_8h_source_l00019}{19}} of file \mbox{\hyperlink{CreateInitialFile_8h_source}{Create\+Initial\+File.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCreateInitialFile_aac4c1b87d39d109433dc3bb6aa0e4c20}\label{classCreateInitialFile_aac4c1b87d39d109433dc3bb6aa0e4c20}} 
+\index{CreateInitialFile@{CreateInitialFile}!CreateInitialFile@{CreateInitialFile}}
+\index{CreateInitialFile@{CreateInitialFile}!CreateInitialFile@{CreateInitialFile}}
+\doxysubsubsection{\texorpdfstring{CreateInitialFile()}{CreateInitialFile()}}
+{\footnotesize\ttfamily Create\+Initial\+File\+::\+Create\+Initial\+File (\begin{DoxyParamCaption}\item[{string}]{initial\+File\+Name,  }\item[{int}]{page\+Quantity }\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+File\+Name} & File to which numbers will be extracted. \\
+\hline
+{\em page\+Quantity} & Number of pages to be created. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{CreateInitialFile_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{CreateInitialFile_8cpp_source}{Create\+Initial\+File.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00007}00007                                                                              \{}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00008}00008     \textcolor{keywordtype}{int} totalQuantity = pageQuantity * IntPage::pageSize;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00009}00009     ofstream \mbox{\hyperlink{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}{initialFile}};}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00010}00010     \mbox{\hyperlink{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}{initialFile}}.open (initialFileName, ios::out | ios::trunc);}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00011}00011     \textcolor{keywordtype}{string} line;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00012}00012     \textcolor{keywordtype}{string} delimiter = \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00014}00014     \textcolor{keywordtype}{size\_t} pos = 0;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00015}00015     \textcolor{keywordtype}{int} token;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00017}00017     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00018}00018     \textcolor{keywordflow}{while} (i < totalQuantity) \{}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00019}00019         token = rand() \% 100000000000000;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00021}00021         \mbox{\hyperlink{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}{initialFile}} << token << \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00023}00023         line.erase(0, pos + delimiter.length());}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00024}00024         i++;}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00026}00026     \mbox{\hyperlink{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}{initialFile}}.close();}
+\DoxyCodeLine{\Hypertarget{classCreateInitialFile_l00027}00027 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}\label{classCreateInitialFile_ae1e7594baaec694cad0fd3b403813c5d}} 
+\index{CreateInitialFile@{CreateInitialFile}!initialFile@{initialFile}}
+\index{initialFile@{initialFile}!CreateInitialFile@{CreateInitialFile}}
+\doxysubsubsection{\texorpdfstring{initialFile}{initialFile}}
+{\footnotesize\ttfamily ofstream Create\+Initial\+File\+::initial\+File\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+An ofstream initial\+File. 
+
+File to which numbers will be generated to. 
+
+Definition at line \mbox{\hyperlink{CreateInitialFile_8h_source_l00023}{23}} of file \mbox{\hyperlink{CreateInitialFile_8h_source}{Create\+Initial\+File.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CreateInitialFile_8h}{Create\+Initial\+File.\+h}}\item 
+Create\+Initial\+File.\+cpp\end{DoxyCompactItemize}

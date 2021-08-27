@@ -1,0 +1,68 @@
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006 \textcolor{preprocessor}{ \#include<cstdio>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{QuickSort_8h}{QuickSort.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{FileExtraction_8h}{FileExtraction.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{PagedArray_8h}{PagedArray.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{CreateInitialFile_8h}{CreateInitialFile.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{IntPage_8h}{IntPage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018 \textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020     \textcolor{keywordtype}{string} initialFileName;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021     \textcolor{keywordtype}{string} destinyFileName;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022     \textcolor{keywordtype}{string} sortType;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023     \textcolor{keywordtype}{bool} sortWithQS = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025     \textcolor{comment}{// ./paged-\/sort -\/i archivo.txt -\/a qs -\/o archivo\_resultado.txt}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027     \textcolor{comment}{//initialFileName = "{}archivo.txt"{};}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028     \textcolor{comment}{//destinyFileName = "{}archivo\_resultado.txt"{};}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030     \textcolor{keywordflow}{if}(argc>=4) \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031         \textcolor{keywordtype}{int} counter;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032         \textcolor{keywordflow}{for} (counter = 0; counter<argc;counter++)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033             \textcolor{keywordflow}{if} (std::string(argv[counter]) == \textcolor{stringliteral}{"{}-\/i"{}}) \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034                 \textcolor{keywordflow}{if} (counter + 1 < argc) \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035                     initialFileName = argv[counter+1];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036                     \textcolor{comment}{//CreateInitialFile cif(initialFileName, 10);}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037                 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038             \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039             \textcolor{keywordflow}{if} (std::string(argv[counter]) == \textcolor{stringliteral}{"{}-\/a"{}}) \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040                 \textcolor{keywordflow}{if} (counter + 1 < argc) \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041                     sortType = argv[counter+1];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042                     \textcolor{keywordflow}{if} (sortType == \textcolor{stringliteral}{"{}qs"{}})\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043                         sortWithQS = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044                     \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045                 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046             \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047             \textcolor{keywordflow}{if} (std::string(argv[counter]) == \textcolor{stringliteral}{"{}-\/o"{}})\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048                 \textcolor{keywordflow}{if} (counter + 1 < argc) \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049                     destinyFileName = argv[counter + 1];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050                 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051             \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052             cout << argv[counter];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054         \textcolor{comment}{//initialFileName = argv[0];}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055         \textcolor{comment}{//destinyFileName = argv[1];}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058     \textcolor{keywordflow}{if} (sortWithQS)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059         \mbox{\hyperlink{classQuickSort}{QuickSort}} qs;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060         \mbox{\hyperlink{classFileExtraction}{FileExtraction}} fe;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061         fe.\mbox{\hyperlink{classFileExtraction_a4aa3c900e72022cd9a926213296be83f}{openAndExtractFile}}(initialFileName, destinyFileName);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062         \textcolor{keywordtype}{int} numberSize = fe.\mbox{\hyperlink{classFileExtraction_a2b0a610dafbcef8b9f5882f5aeea84bb}{getHighestNumberDigits}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063         \mbox{\hyperlink{classPagedArray}{PagedArray}} pa(destinyFileName, numberSize);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064         qs.\mbox{\hyperlink{classQuickSort_aeec3412a8dd4fd380c8a07bd64cc118e}{quickSort}}(\&pa, 0, pa.getSize() -\/ 1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065         \textcolor{comment}{//qs.printArray(\&pa, pa.getSize());}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067 \}}
+
+\end{DoxyCode}

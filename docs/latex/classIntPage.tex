@@ -1,0 +1,215 @@
+\hypertarget{classIntPage}{}\doxysection{Int\+Page Class Reference}
+\label{classIntPage}\index{IntPage@{IntPage}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIntPage_a6f45a2b38317ee0c0dc3fd6fb9435c6c}{Int\+Page}} (fstream $\ast$destiny\+File, int page\+Number, int digits)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntPage_ae79fe365d3c451abf76052c59afb3bdf}{$\sim$\+Int\+Page}} ()
+\begin{DoxyCompactList}\small\item\em A destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}{read\+From\+File}} ()
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}{write\+To\+File}} ()
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIntPage_ab88b1e71fbb122fd981757619dc831e3}{get\+Page\+Number}} ()
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classIntPage_a95723b1510f6c29c6334208689a9add0}{get\+Element}} (int index\+In\+Page)
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classIntPage_ae1996191c9142c209157644e563aa343}{page\+Size}} = 256
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{IntPage_8h_source_l00020}{20}} of file \mbox{\hyperlink{IntPage_8h_source}{Int\+Page.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIntPage_a6f45a2b38317ee0c0dc3fd6fb9435c6c}\label{classIntPage_a6f45a2b38317ee0c0dc3fd6fb9435c6c}} 
+\index{IntPage@{IntPage}!IntPage@{IntPage}}
+\index{IntPage@{IntPage}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{IntPage()}{IntPage()}}
+{\footnotesize\ttfamily Int\+Page\+::\+Int\+Page (\begin{DoxyParamCaption}\item[{fstream $\ast$}]{destiny\+File,  }\item[{int}]{page\+Number,  }\item[{int}]{digits }\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+Initializes a destiny file, page number and digits. 
+
+Definition at line \mbox{\hyperlink{IntPage_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{IntPage_8cpp_source}{Int\+Page.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00009}00009                                                               \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00010}00010     destinyFile = destFile;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00011}00011     this-\/>pageNumber = pageNumber;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00012}00012     this-\/>digits = digits;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00013}00013     \mbox{\hyperlink{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}{readFromFile}}();}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00014}00014 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classIntPage_ae79fe365d3c451abf76052c59afb3bdf}\label{classIntPage_ae79fe365d3c451abf76052c59afb3bdf}} 
+\index{IntPage@{IntPage}!````~IntPage@{$\sim$IntPage}}
+\index{````~IntPage@{$\sim$IntPage}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{$\sim$IntPage()}{~IntPage()}}
+{\footnotesize\ttfamily Int\+Page\+::$\sim$\+Int\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A destructor. 
+
+Rewrites updated numbers to destiny file. 
+
+Definition at line \mbox{\hyperlink{IntPage_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{IntPage_8cpp_source}{Int\+Page.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00059}00059                   \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00060}00060     \mbox{\hyperlink{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}{writeToFile}}();}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00061}00061 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIntPage_a95723b1510f6c29c6334208689a9add0}\label{classIntPage_a95723b1510f6c29c6334208689a9add0}} 
+\index{IntPage@{IntPage}!getElement@{getElement}}
+\index{getElement@{getElement}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily int $\ast$ Int\+Page\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{index\+In\+Page }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+In\+Page} & number to look for in selected page \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IntPage_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{IntPage_8cpp_source}{Int\+Page.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00052}00052                                         \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00053}00053     \textcolor{keywordflow}{if} (indexInPage > data.size()) \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00054}00054         cout << \textcolor{stringliteral}{"{}Error: no existe el elemento "{}} << indexInPage << endl;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00056}00056     \textcolor{keywordflow}{return} \&data.at(indexInPage);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00057}00057 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classIntPage_ab88b1e71fbb122fd981757619dc831e3}\label{classIntPage_ab88b1e71fbb122fd981757619dc831e3}} 
+\index{IntPage@{IntPage}!getPageNumber@{getPageNumber}}
+\index{getPageNumber@{getPageNumber}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{getPageNumber()}{getPageNumber()}}
+{\footnotesize\ttfamily int Int\+Page\+::get\+Page\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+
+Definition at line \mbox{\hyperlink{IntPage_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{IntPage_8cpp_source}{Int\+Page.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00048}00048                            \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00049}00049     \textcolor{keywordflow}{return} pageNumber;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00050}00050 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}\label{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}} 
+\index{IntPage@{IntPage}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily void Int\+Page\+::read\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+
+Definition at line \mbox{\hyperlink{IntPage_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{IntPage_8cpp_source}{Int\+Page.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00016}00016                            \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00017}00017     \textcolor{keywordtype}{int} position = pageNumber*pageSize*(digits + 1); \textcolor{comment}{// se suma 1 para tomar en cuenta la coma}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00018}00018     data.clear();}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00019}00019     \textcolor{keywordtype}{char}* memblock = \textcolor{keyword}{new} \textcolor{keywordtype}{char} [digits];}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00020}00020     destinyFile-\/>seekg(position, ios::beg);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00021}00021     \textcolor{keywordtype}{int} i = pageSize;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00022}00022     \textcolor{keywordflow}{while} ( i > 0 \&\& !destinyFile-\/>eof() ) \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00023}00023         destinyFile-\/>read (memblock, digits);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00024}00024         \textcolor{keywordtype}{int} value = atoi(memblock);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00025}00025         data.push\_back(value);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00026}00026         destinyFile-\/>read(memblock, 1); \textcolor{comment}{// leer la coma}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00027}00027         i-\/-\/;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00029}00029     \textcolor{keyword}{delete}[] memblock;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00030}00030     destinyFile-\/>seekg(0, ios::beg);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00031}00031 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}\label{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}} 
+\index{IntPage@{IntPage}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void Int\+Page\+::write\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+
+Definition at line \mbox{\hyperlink{IntPage_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{IntPage_8cpp_source}{Int\+Page.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00033}00033                           \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00034}00034     \textcolor{keywordtype}{string} value;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00035}00035     \textcolor{keywordtype}{int} position = pageNumber*pageSize*(digits + 1); \textcolor{comment}{// se suma 1 para tomar en cuenta la coma}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00036}00036     destinyFile-\/>seekg(position, ios::beg);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{classIntPage_l00038}00038     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < data.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00039}00039         value = to\_string(data.at(i));}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00040}00040         \textcolor{keywordflow}{while} (value.size() < digits) \{}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00041}00041             value = \textcolor{stringliteral}{"{}0"{}} + value;}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00042}00042         \}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00043}00043         *destinyFile << value << \textcolor{charliteral}{','};}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00045}00045     destinyFile-\/>seekg(0, ios::beg);}
+\DoxyCodeLine{\Hypertarget{classIntPage_l00046}00046 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classIntPage_ae1996191c9142c209157644e563aa343}\label{classIntPage_ae1996191c9142c209157644e563aa343}} 
+\index{IntPage@{IntPage}!pageSize@{pageSize}}
+\index{pageSize@{pageSize}!IntPage@{IntPage}}
+\doxysubsubsection{\texorpdfstring{pageSize}{pageSize}}
+{\footnotesize\ttfamily const int Int\+Page\+::page\+Size = 256\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{IntPage_8h_source_l00038}{38}} of file \mbox{\hyperlink{IntPage_8h_source}{Int\+Page.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IntPage_8h}{Int\+Page.\+h}}\item 
+Int\+Page.\+cpp\end{DoxyCompactItemize}

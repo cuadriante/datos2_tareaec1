@@ -1,0 +1,67 @@
+\hypertarget{IntPage_8cpp_source}{}\doxysection{Int\+Page.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00002}00002 \textcolor{comment}{// Created by cuadriante on 23/8/21.}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{IntPage_8h}{IntPage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{PagedArray_8h}{PagedArray.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00009}\mbox{\hyperlink{classIntPage_a6f45a2b38317ee0c0dc3fd6fb9435c6c}{00009}} \mbox{\hyperlink{classIntPage_a6f45a2b38317ee0c0dc3fd6fb9435c6c}{IntPage::IntPage}}(fstream* destFile, \textcolor{keywordtype}{int} pageNumber, \textcolor{keywordtype}{int} digits) \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00010}00010     destinyFile = destFile;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00011}00011     this-\/>pageNumber = pageNumber;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00012}00012     this-\/>digits = digits;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00013}00013     \mbox{\hyperlink{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}{readFromFile}}();}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00014}00014 \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00016}\mbox{\hyperlink{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}{00016}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classIntPage_a35df2f4eb2473d663f286f6976ebdd74}{IntPage::readFromFile}}() \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00017}00017     \textcolor{keywordtype}{int} position = pageNumber*pageSize*(digits + 1); \textcolor{comment}{// se suma 1 para tomar en cuenta la coma}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00018}00018     data.clear();}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00019}00019     \textcolor{keywordtype}{char}* memblock = \textcolor{keyword}{new} \textcolor{keywordtype}{char} [digits];}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00020}00020     destinyFile-\/>seekg(position, ios::beg);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00021}00021     \textcolor{keywordtype}{int} i = pageSize;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00022}00022     \textcolor{keywordflow}{while} ( i > 0 \&\& !destinyFile-\/>eof() ) \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00023}00023         destinyFile-\/>read (memblock, digits);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00024}00024         \textcolor{keywordtype}{int} value = atoi(memblock);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00025}00025         data.push\_back(value);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00026}00026         destinyFile-\/>read(memblock, 1); \textcolor{comment}{// leer la coma}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00027}00027         i-\/-\/;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00029}00029     \textcolor{keyword}{delete}[] memblock;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00030}00030     destinyFile-\/>seekg(0, ios::beg);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00031}00031 \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00033}\mbox{\hyperlink{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}{00033}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}{IntPage::writeToFile}}() \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00034}00034     \textcolor{keywordtype}{string} value;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00035}00035     \textcolor{keywordtype}{int} position = pageNumber*pageSize*(digits + 1); \textcolor{comment}{// se suma 1 para tomar en cuenta la coma}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00036}00036     destinyFile-\/>seekg(position, ios::beg);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00038}00038     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < data.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00039}00039         value = to\_string(data.at(i));}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00040}00040         \textcolor{keywordflow}{while} (value.size() < digits) \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00041}00041             value = \textcolor{stringliteral}{"{}0"{}} + value;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00042}00042         \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00043}00043         *destinyFile << value << \textcolor{charliteral}{','};}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00045}00045     destinyFile-\/>seekg(0, ios::beg);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00046}00046 \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00048}\mbox{\hyperlink{classIntPage_ab88b1e71fbb122fd981757619dc831e3}{00048}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classIntPage_ab88b1e71fbb122fd981757619dc831e3}{IntPage::getPageNumber}}() \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00049}00049     \textcolor{keywordflow}{return} pageNumber;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00052}\mbox{\hyperlink{classIntPage_a95723b1510f6c29c6334208689a9add0}{00052}} \textcolor{keywordtype}{int} *\mbox{\hyperlink{classIntPage_a95723b1510f6c29c6334208689a9add0}{IntPage::getElement}}(\textcolor{keywordtype}{int} indexInPage) \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00053}00053     \textcolor{keywordflow}{if} (indexInPage > data.size()) \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00054}00054         cout << \textcolor{stringliteral}{"{}Error: no existe el elemento "{}} << indexInPage << endl;}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00056}00056     \textcolor{keywordflow}{return} \&data.at(indexInPage);}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00057}00057 \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00059}\mbox{\hyperlink{classIntPage_ae79fe365d3c451abf76052c59afb3bdf}{00059}} \mbox{\hyperlink{classIntPage_ae79fe365d3c451abf76052c59afb3bdf}{IntPage::\string~IntPage}}() \{}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00060}00060     \mbox{\hyperlink{classIntPage_ae8b81c43d1a7387e77d9bd93d44b84c8}{writeToFile}}();}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00061}00061 \}}
+\DoxyCodeLine{\Hypertarget{IntPage_8cpp_source_l00062}00062 }
+
+\end{DoxyCode}

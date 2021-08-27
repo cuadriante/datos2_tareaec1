@@ -1,0 +1,289 @@
+\hypertarget{classFileExtraction}{}\doxysection{File\+Extraction Class Reference}
+\label{classFileExtraction}\index{FileExtraction@{FileExtraction}}
+
+
+{\ttfamily \#include $<$File\+Extraction.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFileExtraction_a4aa3c900e72022cd9a926213296be83f}{open\+And\+Extract\+File}} (std\+::string initial\+File\+Name, std\+::string destiny\+File\+Name)
+\begin{DoxyCompactList}\small\item\em An extraction function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFileExtraction_abc879e7ccc4bb7131f748b971438b203}{parse\+To\+Destiny\+File}} (std\+::string line, std\+::ofstream $\ast$destiny\+File)
+\begin{DoxyCompactList}\small\item\em A parsing function. \end{DoxyCompactList}\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{classFileExtraction_a687a30e348c7ba36fa9f53d2697be37e}{get\+Destiny\+File}} ()
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classFileExtraction_afc89d754aae65989c6a95349c52438cc}{get\+Destiny\+File\+Vector}} ()
+\item 
+int \mbox{\hyperlink{classFileExtraction_a460dfe7bf957c1d04a6807f1fcfa8284}{get\+Highest\+Number}} (std\+::ifstream $\ast$initial\+File)
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFileExtraction_aa62555aed68167cec1acbe6a010e73ac}{get\+Digits}} (int int\+Token)
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFileExtraction_a2b0a610dafbcef8b9f5882f5aeea84bb}{get\+Highest\+Number\+Digits}} ()
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads numbres from initial file and parses them to a destiny file. 
+
+Definition at line \mbox{\hyperlink{FileExtraction_8h_source_l00017}{17}} of file \mbox{\hyperlink{FileExtraction_8h_source}{File\+Extraction.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileExtraction_a687a30e348c7ba36fa9f53d2697be37e}\label{classFileExtraction_a687a30e348c7ba36fa9f53d2697be37e}} 
+\index{FileExtraction@{FileExtraction}!getDestinyFile@{getDestinyFile}}
+\index{getDestinyFile@{getDestinyFile}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{getDestinyFile()}{getDestinyFile()}}
+{\footnotesize\ttfamily ofstream $\ast$ File\+Extraction\+::get\+Destiny\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00081}00081                                          \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00082}00082     \textcolor{keywordflow}{return} g\_destFile;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00084}00084 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFileExtraction_afc89d754aae65989c6a95349c52438cc}\label{classFileExtraction_afc89d754aae65989c6a95349c52438cc}} 
+\index{FileExtraction@{FileExtraction}!getDestinyFileVector@{getDestinyFileVector}}
+\index{getDestinyFileVector@{getDestinyFileVector}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{getDestinyFileVector()}{getDestinyFileVector()}}
+{\footnotesize\ttfamily vector$<$ int $>$ File\+Extraction\+::get\+Destiny\+File\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00086}00086                                                  \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00087}00087     \textcolor{keywordflow}{return} g\_intVector;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00089}00089 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFileExtraction_aa62555aed68167cec1acbe6a010e73ac}\label{classFileExtraction_aa62555aed68167cec1acbe6a010e73ac}} 
+\index{FileExtraction@{FileExtraction}!getDigits@{getDigits}}
+\index{getDigits@{getDigits}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{getDigits()}{getDigits()}}
+{\footnotesize\ttfamily int File\+Extraction\+::get\+Digits (\begin{DoxyParamCaption}\item[{int}]{int\+Token }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int\+Token} & Number to get digits of. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00119}00119                                           \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00120}00120     \textcolor{keywordtype}{int} digits = 0;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00121}00121     \textcolor{keywordflow}{while}(intToken != 0) \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00122}00122         intToken = intToken / 10;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00123}00123         digits++;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00124}00124     \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00125}00125     \textcolor{keywordflow}{return} digits;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00126}00126 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFileExtraction_a460dfe7bf957c1d04a6807f1fcfa8284}\label{classFileExtraction_a460dfe7bf957c1d04a6807f1fcfa8284}} 
+\index{FileExtraction@{FileExtraction}!getHighestNumber@{getHighestNumber}}
+\index{getHighestNumber@{getHighestNumber}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{getHighestNumber()}{getHighestNumber()}}
+{\footnotesize\ttfamily int File\+Extraction\+::get\+Highest\+Number (\begin{DoxyParamCaption}\item[{std\+::ifstream $\ast$}]{initial\+File }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+File} & File from which highest number will be extracted. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00091}00091                                                              \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00092}00092     \textcolor{keywordtype}{string} line;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00093}00093     \textcolor{keywordtype}{string} delimiter = \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00094}00094     \textcolor{keywordtype}{int} highestNumber = -\/1;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00096}00096     \textcolor{keywordtype}{size\_t} pos = 0;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00097}00097     std::string token;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00098}00098     \textcolor{keywordflow}{while} ( getline (*initialFile, line) )}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00099}00099     \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00100}00100         \textcolor{keywordflow}{while} ((pos = line.find(delimiter)) != std::string::npos) \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00101}00101             token = line.substr(0, pos);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00103}00103             \textcolor{keywordtype}{int} intToken = stoi(token);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00105}00105             \textcolor{keywordflow}{if} (highestNumber < intToken)}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00106}00106             \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00107}00107                 highestNumber = intToken;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00108}00108             \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00110}00110             line.erase(0, pos + delimiter.length());}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00111}00111         \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00113}00113     initialFile-\/>close();}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00114}00114     \textcolor{comment}{//cout << "{}highest number: "{} << highestNumber << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00116}00116     \textcolor{keywordflow}{return} highestNumber;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00117}00117 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFileExtraction_a2b0a610dafbcef8b9f5882f5aeea84bb}\label{classFileExtraction_a2b0a610dafbcef8b9f5882f5aeea84bb}} 
+\index{FileExtraction@{FileExtraction}!getHighestNumberDigits@{getHighestNumberDigits}}
+\index{getHighestNumberDigits@{getHighestNumberDigits}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{getHighestNumberDigits()}{getHighestNumberDigits()}}
+{\footnotesize\ttfamily int File\+Extraction\+::get\+Highest\+Number\+Digits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00128}{128}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00128}00128                                            \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00129}00129     \textcolor{keywordflow}{return} g\_highestNumberDigits;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00130}00130 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFileExtraction_a4aa3c900e72022cd9a926213296be83f}\label{classFileExtraction_a4aa3c900e72022cd9a926213296be83f}} 
+\index{FileExtraction@{FileExtraction}!openAndExtractFile@{openAndExtractFile}}
+\index{openAndExtractFile@{openAndExtractFile}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{openAndExtractFile()}{openAndExtractFile()}}
+{\footnotesize\ttfamily void File\+Extraction\+::open\+And\+Extract\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{initial\+File\+Name,  }\item[{std\+::string}]{destiny\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+An extraction function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+File\+Name} & File from which numbers will be extracted. \\
+\hline
+{\em destiny\+File\+Name} & File to which numbers will be written. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00017}00017                                                                                       \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00018}00018     ifstream initialFile;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00019}00019     initialFile.open (initialFileName);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00020}00020     ofstream destFile;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00021}00021     destFile.open (destinyFileName, ios::trunc | ios::binary);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00022}00022     \textcolor{keywordtype}{string} line;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00024}00024     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00025}00025     \textcolor{keywordflow}{if} (initialFile.is\_open() \&\& destFile.is\_open())}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00027}00027         g\_highestNumber = \mbox{\hyperlink{classFileExtraction_a460dfe7bf957c1d04a6807f1fcfa8284}{getHighestNumber}}(\&initialFile);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00028}00028         g\_highestNumberDigits = \mbox{\hyperlink{classFileExtraction_aa62555aed68167cec1acbe6a010e73ac}{getDigits}}(g\_highestNumber);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00029}00029         initialFile.open(initialFileName);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00030}00030         \textcolor{comment}{//std::cout << "{}initialFile opened \(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00031}00031         \textcolor{keywordflow}{while} ( getline (initialFile, line) )}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00033}00033             \textcolor{comment}{//cout << "{}from initialFile: "{} << line << '\(\backslash\)n';}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00034}00034             \mbox{\hyperlink{classFileExtraction_abc879e7ccc4bb7131f748b971438b203}{parseToDestinyFile}}(line, \&destFile);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00035}00035             i++;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00036}00036         \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00037}00037         initialFile.close();}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00040}00040     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}Unable to open initialFile"{}};}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00042}00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFileExtraction_abc879e7ccc4bb7131f748b971438b203}\label{classFileExtraction_abc879e7ccc4bb7131f748b971438b203}} 
+\index{FileExtraction@{FileExtraction}!parseToDestinyFile@{parseToDestinyFile}}
+\index{parseToDestinyFile@{parseToDestinyFile}!FileExtraction@{FileExtraction}}
+\doxysubsubsection{\texorpdfstring{parseToDestinyFile()}{parseToDestinyFile()}}
+{\footnotesize\ttfamily void File\+Extraction\+::parse\+To\+Destiny\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{line,  }\item[{std\+::ofstream $\ast$}]{destiny\+File }\end{DoxyParamCaption})}
+
+
+
+A parsing function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Line from destiny file where numbers will be parsed. \\
+\hline
+{\em destiny\+File} & File where numbers will be parsed to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{FileExtraction_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{FileExtraction_8cpp_source}{File\+Extraction.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00044}00044                                                                           \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00045}00045     \textcolor{keywordtype}{string} delimiter = \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00047}00047     \textcolor{keywordtype}{size\_t} pos = 0;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00048}00048     std::string token;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00049}00049     \textcolor{keywordtype}{int} *arr;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00052}00052     \textcolor{keywordflow}{while} ((pos = line.find(delimiter)) != std::string::npos) \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00053}00053         token = line.substr(0, pos);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00055}00055         \textcolor{keywordtype}{int} intToken = stoi(token);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00057}00057         \textcolor{keywordtype}{int} intTokenDigits = \mbox{\hyperlink{classFileExtraction_aa62555aed68167cec1acbe6a010e73ac}{getDigits}}(intToken);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00059}00059         \textcolor{keywordtype}{int} quantityToAdd = g\_highestNumberDigits -\/ intTokenDigits;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00060}00060         \textcolor{keywordflow}{while} (quantityToAdd > 0)}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00061}00061         \{}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00062}00062             *destinyFile << \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00063}00063             quantityToAdd -\/-\/;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00064}00064         \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00065}00065         \textcolor{comment}{//addZeroes(intToken, destinyFile);}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00067}00067         *destinyFile << intToken << \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00069}00069         \textcolor{comment}{//std::cout << "{}parsed: "{} << intToken << std::endl;}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00071}00071         g\_intVector.insert(g\_intVector.cend(), intToken);}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00073}00073         line.erase(0, pos + delimiter.length());}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00075}00075     g\_destFile = destinyFile;}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00076}00076     destinyFile-\/>close();}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00077}00077     \textcolor{comment}{// cout << "{}delimiter not found for "{} << line << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00078}00078     \textcolor{comment}{//std::cout << line << std::endl;}}
+\DoxyCodeLine{\Hypertarget{classFileExtraction_l00079}00079 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FileExtraction_8h}{File\+Extraction.\+h}}\item 
+File\+Extraction.\+cpp\end{DoxyCompactItemize}

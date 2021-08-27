@@ -1,0 +1,52 @@
+\hypertarget{PagedArray_8h_source}{}\doxysection{Paged\+Array.\+h}
+\mbox{\hyperlink{PagedArray_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00002}00002 \textcolor{comment}{// Created by cuadriante on 21/8/21.}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef DATOS2\_TAREAEC1\_PAGEDARRAY\_H}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00012}00012 \textcolor{preprocessor}{\#define DATOS2\_TAREAEC1\_PAGEDARRAY\_H}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00017}00017 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{IntPage_8h}{IntPage.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00019}00019 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00021}\mbox{\hyperlink{classPagedArray}{00021}} \textcolor{keyword}{class }\mbox{\hyperlink{classPagedArray}{PagedArray}} \{}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00022}00022 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00025}00025     fstream destinyFile;}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00028}00028     \textcolor{keywordtype}{int} digits;}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00031}00031     \textcolor{keyword}{const} \textcolor{keywordtype}{int} maxPages = 6;}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00034}00034     \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00037}00037     \textcolor{keyword}{mutable} vector<IntPage *> loadedPages;}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00039}00039 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00045}00045     \mbox{\hyperlink{classPagedArray_a0544371a4a2888acc56d0fa9e9948a29}{PagedArray}}(std::string destinyFileName, \textcolor{keywordtype}{int} numberSize);}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00050}00050     \mbox{\hyperlink{classPagedArray_a05aeabfccf2648dcb146141ca6ac899f}{\string~PagedArray}}();}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00051}00051     \textcolor{keywordtype}{void} printContents();}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00055}00055     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPagedArray_a6c2cc70099ae45673a663127f854e4c7}{getSize}}();}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00059}00059     \mbox{\hyperlink{classIntPage}{IntPage}} * \mbox{\hyperlink{classPagedArray_aec3f90b6808a7b19fa67d23ed373588f}{searchForPage}}(\textcolor{keywordtype}{int} pageNumber);}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00062}00062     \textcolor{keywordtype}{int} \&operator[](\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00063}00063     \textcolor{comment}{//int operator[](int index) const;}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00064}00064 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00065}00065 \};}
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{PagedArray_8h_source_l00068}00068 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOS2\_TAREAEC1\_PAGEDARRAY\_H}}
+
+\end{DoxyCode}

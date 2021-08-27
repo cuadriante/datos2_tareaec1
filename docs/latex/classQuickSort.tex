@@ -1,0 +1,173 @@
+\hypertarget{classQuickSort}{}\doxysection{Quick\+Sort Class Reference}
+\label{classQuickSort}\index{QuickSort@{QuickSort}}
+
+
+{\ttfamily \#include $<$Quick\+Sort.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classQuickSort_aacefc438b955af16c3f8a6cb62ef12ee}{swap}} (int i, int j, \mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$arr)
+\begin{DoxyCompactList}\small\item\em A swapping function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classQuickSort_aef71f1a995223bcf9b4b12e8cac9b06a}{partition}} (\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$arr, int low, int high)
+\begin{DoxyCompactList}\small\item\em A partition function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQuickSort_aeec3412a8dd4fd380c8a07bd64cc118e}{quick\+Sort}} (\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$arr, int low, int high)
+\begin{DoxyCompactList}\small\item\em A quick sort function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQuickSort_a9c1ccb11d9483d644c3118524bfc1f0d}{print\+Array}} (\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$arr, int size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates a sorted version of an initial set of numbers using the quick sort method. 
+
+Definition at line \mbox{\hyperlink{QuickSort_8h_source_l00018}{18}} of file \mbox{\hyperlink{QuickSort_8h_source}{Quick\+Sort.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuickSort_aef71f1a995223bcf9b4b12e8cac9b06a}\label{classQuickSort_aef71f1a995223bcf9b4b12e8cac9b06a}} 
+\index{QuickSort@{QuickSort}!partition@{partition}}
+\index{partition@{partition}!QuickSort@{QuickSort}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int Quick\+Sort\+::partition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$}]{arr,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+A partition function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Array of numbers. \\
+\hline
+{\em low} & Lowest number in array. \\
+\hline
+{\em high} & Highest number in array. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{QuickSort_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{QuickSort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00030}00030                                                            \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00031}00031     \textcolor{keywordtype}{int} pivot = (*arr)[high]; \textcolor{comment}{// primero lo posiciona en el ultimo elemento}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00033}00033     \textcolor{comment}{//printArray(arr, high);}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00034}00034     \textcolor{comment}{//std::cout << "{}low: "{} << low << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00035}00035     \textcolor{comment}{//std::cout << "{}high: "{} << high << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00037}00037     \textcolor{keywordtype}{int} i = (low -\/ 1); \textcolor{comment}{// indice del menor numero}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00038}00038     \textcolor{comment}{//std::cout << "{}i: "{} << i << "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00040}00040     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = low; j <= high -\/ 1; j++)}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00042}00042         \textcolor{comment}{// chequea si es menor o igual al pivot}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00043}00043         \textcolor{keywordflow}{if} ((*arr)[j] <= pivot)}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00044}00044         \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00045}00045             i++;    \textcolor{comment}{// incrementa index del menor elemento}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00046}00046             \mbox{\hyperlink{classQuickSort_aacefc438b955af16c3f8a6cb62ef12ee}{swap}}(i, j, arr); \textcolor{comment}{// ordena}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00049}00049     \mbox{\hyperlink{classQuickSort_aacefc438b955af16c3f8a6cb62ef12ee}{swap}}(i + 1, high, arr);}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00050}00050     \textcolor{keywordflow}{return} (i + 1);}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00051}00051 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classQuickSort_a9c1ccb11d9483d644c3118524bfc1f0d}\label{classQuickSort_a9c1ccb11d9483d644c3118524bfc1f0d}} 
+\index{QuickSort@{QuickSort}!printArray@{printArray}}
+\index{printArray@{printArray}!QuickSort@{QuickSort}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}}
+{\footnotesize\ttfamily void Quick\+Sort\+::print\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{QuickSort_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{QuickSort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00053}00053                                                     \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00054}00054     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00055}00055     \textcolor{keywordflow}{for} (i=0; i < size; i++)}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00056}00056         printf(\textcolor{stringliteral}{"{}\%d "{}}, (*arr)[i]);}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00057}00057     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00058}00058 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classQuickSort_aeec3412a8dd4fd380c8a07bd64cc118e}\label{classQuickSort_aeec3412a8dd4fd380c8a07bd64cc118e}} 
+\index{QuickSort@{QuickSort}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!QuickSort@{QuickSort}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}}
+{\footnotesize\ttfamily void Quick\+Sort\+::quick\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$}]{arr,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+A quick sort function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Array of numbers. \\
+\hline
+{\em low} & Lowest number in array. \\
+\hline
+{\em high} & Highest number in array. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{QuickSort_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{QuickSort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00010}00010                                                             \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00011}00011     \textcolor{keywordflow}{if} (low < high)}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00013}00013         \textcolor{comment}{// divide en 2 arrays segun pivot}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00014}00014         \textcolor{keywordtype}{int} pivot = \mbox{\hyperlink{classQuickSort_aef71f1a995223bcf9b4b12e8cac9b06a}{partition}}(arr, low, high);}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00015}00015         \mbox{\hyperlink{classQuickSort_aeec3412a8dd4fd380c8a07bd64cc118e}{quickSort}}(arr, low, pivot -\/ 1); \textcolor{comment}{// sub array de antes}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00016}00016         \mbox{\hyperlink{classQuickSort_aeec3412a8dd4fd380c8a07bd64cc118e}{quickSort}}(arr, pivot + 1, high); \textcolor{comment}{// sub array despues}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00018}00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classQuickSort_aacefc438b955af16c3f8a6cb62ef12ee}\label{classQuickSort_aacefc438b955af16c3f8a6cb62ef12ee}} 
+\index{QuickSort@{QuickSort}!swap@{swap}}
+\index{swap@{swap}!QuickSort@{QuickSort}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Quick\+Sort\+::swap (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{classPagedArray}{Paged\+Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+
+
+A swapping function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index of number to be swapped. \\
+\hline
+{\em j} & Index of number to be swapped. \\
+\hline
+{\em arr} & Array of numbers. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{QuickSort_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{QuickSort_8cpp_source}{Quick\+Sort.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00022}00022     \textcolor{keywordtype}{int} temp = (*arr)[a];}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00023}00023     (*arr)[a] = (*arr)[b];}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00024}00024     (*arr)[b] = temp;}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00025}00025 \textcolor{comment}{//    int t = *a;}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00026}00026 \textcolor{comment}{//    *a = *b;}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00027}00027 \textcolor{comment}{//    *b = t;}}
+\DoxyCodeLine{\Hypertarget{classQuickSort_l00028}00028 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{QuickSort_8h}{Quick\+Sort.\+h}}\item 
+Quick\+Sort.\+cpp\end{DoxyCompactItemize}

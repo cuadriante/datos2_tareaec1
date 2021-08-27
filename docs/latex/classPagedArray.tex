@@ -1,0 +1,194 @@
+\hypertarget{classPagedArray}{}\doxysection{Paged\+Array Class Reference}
+\label{classPagedArray}\index{PagedArray@{PagedArray}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPagedArray_a0544371a4a2888acc56d0fa9e9948a29}{Paged\+Array}} (std\+::string destiny\+File\+Name, int number\+Size)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPagedArray_a05aeabfccf2648dcb146141ca6ac899f}{$\sim$\+Paged\+Array}} ()
+\begin{DoxyCompactList}\small\item\em A destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPagedArray_ad8d46f17cecbc3e3e25f460aadb19227}{print\+Contents}} ()
+\item 
+int \mbox{\hyperlink{classPagedArray_a6c2cc70099ae45673a663127f854e4c7}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em A function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIntPage}{Int\+Page}} $\ast$ \mbox{\hyperlink{classPagedArray_aec3f90b6808a7b19fa67d23ed373588f}{search\+For\+Page}} (int page\+Number)
+\begin{DoxyCompactList}\small\item\em A search function. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{classPagedArray_ac17809b5815e438be1c7d26410b31049}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{PagedArray_8h_source_l00021}{21}} of file \mbox{\hyperlink{PagedArray_8h_source}{Paged\+Array.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPagedArray_a0544371a4a2888acc56d0fa9e9948a29}\label{classPagedArray_a0544371a4a2888acc56d0fa9e9948a29}} 
+\index{PagedArray@{PagedArray}!PagedArray@{PagedArray}}
+\index{PagedArray@{PagedArray}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{PagedArray()}{PagedArray()}}
+{\footnotesize\ttfamily Paged\+Array\+::\+Paged\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{destiny\+File\+Name,  }\item[{int}]{number\+Size }\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destiny\+File\+Name} & File to which numbers will be written. \\
+\hline
+{\em number\+Size} & The amount of digits from the highest number in the initial file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{PagedArray_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{PagedArray_8cpp_source}{Paged\+Array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00010}00010                                                           \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00011}00011     destinyFile.open(destFileName, ios::in | ios::out | ios::binary);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00012}00012     digits = numberSize;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00013}00013     destinyFile.seekg(0,ios::end);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00014}00014     size = destinyFile.tellg()/(digits + 1);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00015}00015 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPagedArray_a05aeabfccf2648dcb146141ca6ac899f}\label{classPagedArray_a05aeabfccf2648dcb146141ca6ac899f}} 
+\index{PagedArray@{PagedArray}!````~PagedArray@{$\sim$PagedArray}}
+\index{````~PagedArray@{$\sim$PagedArray}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{$\sim$PagedArray()}{~PagedArray()}}
+{\footnotesize\ttfamily Paged\+Array\+::$\sim$\+Paged\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A destructor. 
+
+Deletes loaded pages and closes file. 
+
+Definition at line \mbox{\hyperlink{PagedArray_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{PagedArray_8cpp_source}{Paged\+Array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00018}00018                         \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00019}00019     \textcolor{keywordflow}{while} (loadedPages.size() > 0)\{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00020}00020         \textcolor{keyword}{delete} loadedPages.at(0);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00021}00021         loadedPages.erase(loadedPages.begin());}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00023}00023     destinyFile.close();}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00024}00024 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPagedArray_a6c2cc70099ae45673a663127f854e4c7}\label{classPagedArray_a6c2cc70099ae45673a663127f854e4c7}} 
+\index{PagedArray@{PagedArray}!getSize@{getSize}}
+\index{getSize@{getSize}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Paged\+Array\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function. 
+
+
+
+Definition at line \mbox{\hyperlink{PagedArray_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{PagedArray_8cpp_source}{Paged\+Array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00035}00035                        \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00036}00036     \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00037}00037 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPagedArray_ac17809b5815e438be1c7d26410b31049}\label{classPagedArray_ac17809b5815e438be1c7d26410b31049}} 
+\index{PagedArray@{PagedArray}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily int \& Paged\+Array\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PagedArray_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{PagedArray_8cpp_source}{Paged\+Array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00039}00039                                      \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00040}00040     \textcolor{keywordtype}{int} pageNumber = index/IntPage::pageSize;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00041}00041     \mbox{\hyperlink{classIntPage}{IntPage}} *page = \mbox{\hyperlink{classPagedArray_aec3f90b6808a7b19fa67d23ed373588f}{searchForPage}}(pageNumber);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00042}00042     \textcolor{keywordtype}{int} indexInPage = index \% IntPage::pageSize;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00043}00043     \textcolor{keywordtype}{int}* result = page-\/>\mbox{\hyperlink{classIntPage_a95723b1510f6c29c6334208689a9add0}{getElement}}(indexInPage);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00044}00044     \textcolor{keywordflow}{return} *result;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00045}00045 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPagedArray_ad8d46f17cecbc3e3e25f460aadb19227}\label{classPagedArray_ad8d46f17cecbc3e3e25f460aadb19227}} 
+\index{PagedArray@{PagedArray}!printContents@{printContents}}
+\index{printContents@{printContents}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{printContents()}{printContents()}}
+{\footnotesize\ttfamily void Paged\+Array\+::print\+Contents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PagedArray_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{PagedArray_8cpp_source}{Paged\+Array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00027}00027                               \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00028}00028     destinyFile.flush();}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00029}00029     \textcolor{keywordtype}{string} line;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00030}00030     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00031}00031     getline(destinyFile, line);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00032}00032     cout << \textcolor{stringliteral}{"{}from destiny file: "{}} << line << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00033}00033 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPagedArray_aec3f90b6808a7b19fa67d23ed373588f}\label{classPagedArray_aec3f90b6808a7b19fa67d23ed373588f}} 
+\index{PagedArray@{PagedArray}!searchForPage@{searchForPage}}
+\index{searchForPage@{searchForPage}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{searchForPage()}{searchForPage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIntPage}{Int\+Page}} $\ast$ Paged\+Array\+::search\+For\+Page (\begin{DoxyParamCaption}\item[{int}]{page\+Number }\end{DoxyParamCaption})}
+
+
+
+A search function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+Number} & Page that will be searched for in loaded\+Pages. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{PagedArray_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{PagedArray_8cpp_source}{Paged\+Array.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00056}00056                                                   \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00057}00057     \mbox{\hyperlink{classIntPage}{IntPage}}* page;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00058}00058     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < loadedPages.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00059}00059         page = loadedPages.at(i);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00060}00060         \textcolor{keywordflow}{if} (page-\/>\mbox{\hyperlink{classIntPage_ab88b1e71fbb122fd981757619dc831e3}{getPageNumber}}() == pageNumber) \{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00061}00061             \textcolor{keywordflow}{return} page;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00062}00062         \}}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00064}00064     page = \textcolor{keyword}{new} \mbox{\hyperlink{classIntPage}{IntPage}}(\&destinyFile, pageNumber, digits);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00065}00065     loadedPages.push\_back(page); \textcolor{comment}{// se crea una pagina nueva si no existe en el vector}}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00066}00066     \textcolor{keywordflow}{if} (loadedPages.size() > maxPages)\{}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00067}00067         \textcolor{keyword}{delete} loadedPages.at(0);}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00068}00068         loadedPages.erase(loadedPages.begin());}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00070}00070     \textcolor{keywordflow}{return} page;}
+\DoxyCodeLine{\Hypertarget{classPagedArray_l00071}00071 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{PagedArray_8h}{Paged\+Array.\+h}}\item 
+Paged\+Array.\+cpp\end{DoxyCompactItemize}
